@@ -6,5 +6,6 @@ module.exports = {
       database: 'SOCGradApp',  
       password: 'Qu6WFe2W25ngBbhi8FqDbhUMgQDt91x4', 
       port: 3001,               
+  },
   };
   
