@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors'); // Import the cors package
 
-const apiRoutes = require('./src/Routes/api');
+const apiRoutes = require('./src/Routes/api.js');
 
 const app = express();
 const port = process.env.PORT || 5000;
