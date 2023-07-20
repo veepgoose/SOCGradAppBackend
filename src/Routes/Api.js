@@ -5,7 +5,7 @@ const Bootcamper = require('../models/Bootcamper');
 router.post('/save', async (req, res) => {
   try {
     const bootcamperData = req.body;
-    const bootcamper = new bootcamperData();
+    const bootcamper = new Bootcamper(bootcamperData); // Use 'Bootcamper' instead of 'bootcamperData'
     const saved = await bootcamper.saveBootcamperData(bootcamperData);
 
     if (saved) {
@@ -20,3 +20,4 @@ router.post('/save', async (req, res) => {
 });
 
 module.exports = router;
+
