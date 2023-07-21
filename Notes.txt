@@ -9,3 +9,16 @@ Git Cheatsheet:
 https://res.cloudinary.com/hy4kyit2a/image/upload/SF_git_cheatsheet.pdf
 
 EleSQL URL: postgres://addwrmhz:Qu6WFe2W25ngBbhi8FqDbhUMgQDt91x4@tyke.db.elephantsql.com/addwrmhz
+
+CREATE TABLE ATTENDEES (
+attendee_id SERIAL PRIMARY KEY,
+name TEXT,
+email TEXT,
+staying_monday BOOL,
+hackathon BOOL,
+staying_tuesday BOOL,
+going_out_interest BOOL,
+beer BOOL,
+wine BOOL,
+spirits BOOL,
+beast_mode BOOL);
