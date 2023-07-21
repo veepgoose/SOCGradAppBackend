@@ -5,7 +5,7 @@ const cors = require('cors'); // Import the cors package
 const apiRoutes = require('./src/Routes/api.js');
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3000; //Change this to 5000 when deploying to Heroku
 
 app.use(cors()); // Use cors middleware to allow requests from all origins
 app.use(bodyParser.json());
