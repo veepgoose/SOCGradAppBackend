@@ -1,19 +1,33 @@
 const express = require('express');
-const bodyParser = require('body-parser');
-const cors = require('cors'); // Import the cors package
-
-const apiRoutes = require('./src/Routes/api.js');
+const cors = require('cors');
+const nameEmailController = require('./controllers/nameEmailController');
+const mondayStayController = require('./controllers/mondayStayController');
+// Import other controllers as needed
+// Add the following controllers
+const hackathonController = require('./controllers/hackathonController');
+const tuesdayStayController = require('./controllers/tuesdayStayController');
+const celebrationController = require('./controllers/celebrationController');
+const drinkPreferenceController = require('./controllers/drinkPreferenceController');
+const thankYouController = require('./controllers/thankYouController');
 
 const app = express();
-const port = process.env.PORT || 3000; //Change this to 5000 when deploying to Heroku
+const port = process.env.PORT || 5000;
 
-app.use(cors()); // Use cors middleware to allow requests from all origins
-app.use(bodyParser.json());
+app.use(cors());
+app.use(express.json());
 
-app.use('/api', apiRoutes);
+// Use the controllers (routers) for each component
+app.use('/api', nameEmailController);
+app.use('/api', mondayStayController);
+// Use other controllers as needed
+app.use('/api', hackathonController);
+app.use('/api', tuesdayStayController);
+app.use('/api', celebrationController);
+app.use('/api', drinkPreferenceController);
+app.use('/api', thankYouController);
 
 app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
+  console.log(`Server is running on port ${port}`);
 });
 
 
